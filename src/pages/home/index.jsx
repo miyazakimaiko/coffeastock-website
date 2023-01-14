@@ -30,10 +30,10 @@ const PublicHome = () => {
           </Link>
         </div>
         <div className="flex items-center">
-            <a href="https://coffeastock.com/login" className="text-sm mr-4">
+            <a href="https://app.coffeastock.com/login" className="text-sm mr-4">
                 Sign in
             </a>
-            <a href="https://coffeastock.com/register">
+            <a href="https://app.coffeastock.com/register">
               <div className="text-base font-bold text-pink-red bg-white shadow-xl px-3 py-2 rounded-md btn-transition signup-btn">
                 Sign up
               </div>

@@ -72,7 +72,7 @@ const Hero = () => {
           Ultimate coffee journal app for Baristas. Collect, visualize, and analyze your brewing data accurately to find your signature recipe for every coffee.
         </p>
         <div className="mr-8 mt-8">
-          <a href="https://coffeastock.com/register">
+          <a href="https://app.coffeastock.com/register">
             <div className="w-56 home-btn btn-transition start-trial-button">
               TRY FOR FREE
             </div>
