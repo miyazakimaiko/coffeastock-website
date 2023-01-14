@@ -1,36 +1,33 @@
 import React, { useLayoutEffect } from 'react';
-import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import DashboardImg from '../../assets/images/coffeastock-dashboard.webp';
 import separateLetters from '../../helpers/SeparateLettersForAnimation';
 
 
 const Hero = () => {
-  const heroTimeline = gsap.timeline({
-    defaults: {
-      ease: "Power3.easeInOut",
-    },
-    paused: true,
-    delay: 0.8,
-  });
-
-  document.addEventListener("readystatechange", (event) => {
-    if (document.readyState === "complete") {
-      heroTimeline.play();
-    }
-  });
 
   useLayoutEffect(() => {
+    const heroTimeline = gsap.timeline({
+      defaults: {
+        ease: "Power3.easeInOut",
+      },
+      paused: true,
+      delay: 0.3,
+    });
+
     const words = document.querySelectorAll("#heroTitle .words");
     separateLetters(words);
     gsap.set("#heroTitle .letter", {display: "inline-block"});
-    heroTimeline.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, stagger: 0.02}, "<");
-    heroTimeline.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.5");
-    heroTimeline.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<");
+    heroTimeline.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, stagger: 0.02})
+    heroTimeline.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.5")
+    heroTimeline.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<")
     heroTimeline.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
-    if (document.readyState === "complete") {
-      heroTimeline.play();
-    }
+
+    document.addEventListener("readystatechange", (event) => {
+      if (document.readyState === "complete") {
+        heroTimeline.play();
+      }
+    });
   }, [])
 
   return (
@@ -75,11 +72,11 @@ const Hero = () => {
           Ultimate coffee journal app for Baristas. Collect, visualize, and analyze your brewing data accurately to find your signature recipe for every coffee.
         </p>
         <div className="mr-8 mt-8">
-          <Link to="/register">
+          <a href="https://coffeastock.com/register">
             <div className="w-56 home-btn btn-transition start-trial-button">
               TRY FOR FREE
             </div>
-          </Link>
+          </a>
         </div>
       </section>
       <section className="hidden lg:block bg-circle">
