@@ -30,14 +30,14 @@ const PublicHome = () => {
           </Link>
         </div>
         <div className="flex items-center">
-            <Link to="/login" className="text-sm mr-4">
+            <a href="https://coffeastock.com/login" className="text-sm mr-4">
                 Sign in
-            </Link>
-            <Link to="/register">
+            </a>
+            <a href="https://coffeastock.com/register">
               <div className="text-base font-bold text-pink-red bg-white shadow-xl px-3 py-2 rounded-md btn-transition signup-btn">
                 Sign up
               </div>
-            </Link>
+            </a>
           </div>
       </header>
       <main className="text-burnt-sienna-darker">

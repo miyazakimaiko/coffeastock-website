@@ -12,14 +12,14 @@ const PublicHeader = () => {
         </Link>
       </div>
       <div className="flex items-center">
-          <Link to="/login" className="text-sm mr-4">
+          <a a href="https://coffeastock.com/login" className="text-sm mr-4">
               Sign in
-          </Link>
-          <Link to="/register">
+          </a>
+          <a href="https://coffeastock.com/register">
             <div className="border text-base border-burnt-sienna shadow-xl px-3 py-2 rounded-md button-transition">
               Sign up
             </div>
-          </Link>
+          </a>
         </div>
     </header>
   )
