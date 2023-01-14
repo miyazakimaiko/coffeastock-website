@@ -1,13 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --burnt-sienna-darker: #484040;
+  --burnt-sienna: #484040;
+  --blue: #68B3C7;
+  --ash-blue: #a8c8c8;
+  --orange: #EA9470;
+  --green: #93CCAC;
+  --red: #EB5E28;
+  --pink-red: #C65673;
+  --pink: #e19193;
+  --ash-pink: #E8C1B4;
+  --lightpink: #FFE1E6;
+  --creme: #F4F3EE;
+  --lightcreme: #f8f7f4;
+  --greycreme: #e9e8e3;
+  --lightgrey: #E6E6E6;
+  --bordergrey: #D7D5CF;
+  --lime: #D6E4A3;
+  --yellow: #F3BB44;
+  --purple: #9a92c4;
+  --toastify-color-info: var(--blue);
+  --toastify-color-success: var(--green);
+  --toastify-color-warning: var(--orange);
+  --toastify-color-error: var(--red);
+  --toastify-font-family: 'Kumbh Sans';
+  --nav-width: 70vw;
+  --nav-width-negative: -70vw;
+  --nav-width-sm: 240px;
+  --nav-width-sm-negative: -240px;
+  --header-height: 60px;
+}
+
+html {
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: .5s;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+button, input, textarea {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+p, span {
+  overflow-wrap: anywhere;
+}
+
+strong {
+  font-weight: 600;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#terms > article,
+#privacy > article {
+  margin-bottom: 30px;
+}
+
+#terms h2,
+#privacy h2 {
+  border-bottom: 1px solid var(--burnt-sienna);
+}
+
+#terms h3,
+#privacy h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+#terms ol,
+#privacy ol {
+  padding-left: 25px;
+}
+
+#terms p,
+#terms ol.list-decimal li,
+#privacy p,
+#privacy ol.list-decimal li {
+  padding-bottom: 20px;
+}
+
+#terms ol.list-disc li,
+#privacy .list-disc li {
+  padding-bottom: 5px;
+}
+
+#terms ol.list-disc li:last-child ,
+#privacy ol.list-disc li:last-child {
+  padding-bottom: 20px;
 }
