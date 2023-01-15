@@ -21,7 +21,7 @@ const DashboardMetricsFeat = () => {
   }
 
   return (
-    <article id="dashboard-metrics" className="flex flex-col lg:flex-row items-center w-full max-w-[1300px] mx-auto mt-32 lg:mt-64">
+    <article id="dashboard-metrics" className="flex flex-col lg:flex-row items-center w-full max-w-[1300px] mx-auto py-16 border-b md:border-b-0 border-b-burnt-sienna border-opacity-20">
       <section className="left-section max-w-[680px]">
         <div className="bg-circle-blue w-full p-3">
           <img 

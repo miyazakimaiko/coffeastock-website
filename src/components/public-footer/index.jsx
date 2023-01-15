@@ -16,7 +16,7 @@ const PublicFooter = () => {
           to="/privacy"
           key="privacy"
         >
-          Privacy Policy
+          Privacy
         </Link>
       </div>
       <div>

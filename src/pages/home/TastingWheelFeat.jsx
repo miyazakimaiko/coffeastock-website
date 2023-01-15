@@ -21,7 +21,7 @@ const TastingWheelFeat = () => {
   }
 
   return (
-    <article id="tasting-wheel" className="flex flex-col lg:flex-row-reverse items-center w-full max-w-[1300px] mx-auto mt-32 lg:mt-48">
+    <article id="tasting-wheel" className="flex flex-col lg:flex-row-reverse items-center w-full max-w-[1300px] mx-auto py-16 border-b md:border-b-0 border-b-burnt-sienna border-opacity-20">
       <section className="right-section max-w-[680px]">
         <div className="bg-circle-pink w-full p-3">
           <img 

@@ -21,7 +21,10 @@ const CompareRecipesFeat = () => {
   }
 
   return (
-    <article id="compare-recipes" className="flex flex-col lg:flex-row-reverse items-center w-full max-w-[1300px] mx-auto mt-32 lg:mt-48">
+    <article 
+      id="compare-recipes" 
+      className="flex flex-col lg:flex-row-reverse items-center w-full max-w-[1300px] mx-auto py-16"
+    >
       <section className="right-section max-w-[680px]">
         <div className="bg-circle-orange w-full p-3">
           <img

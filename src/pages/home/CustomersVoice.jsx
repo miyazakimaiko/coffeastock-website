@@ -4,7 +4,7 @@ import { FaHeart } from 'react-icons/fa';
 const CustomersVoice = () => {
 
   return (
-    <article id="customers-voice" className="w-full p-4 md:p-10 my-24 md:my-48">
+    <article id="customers-voice" className="w-full p-4 md:p-10 my-20 md:mt-20 md:mb-24">
       <FaHeart className="mx-auto mb-16 text-lg text-orange" />
       <section className="quote md:max-w-[800px] mx-auto text-center">
         <p className="text-xl md:text-2xl leading-relaxed md:leading-loose italic">

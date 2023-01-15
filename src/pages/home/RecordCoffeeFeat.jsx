@@ -21,7 +21,7 @@ const RecordCoffeeFeat = () => {
   }
 
   return (
-    <article id="record-coffee" className="flex flex-col lg:flex-row items-center w-full max-w-[1300px] mx-auto mt-32 lg:mt-48">
+    <article id="record-coffee" className="flex flex-col lg:flex-row items-center w-full max-w-[1300px] mx-auto mt-24 py-16 border-b md:border-b-0 border-b-burnt-sienna border-opacity-20">
       <section className="left-section max-w-[680px]">
         <div className="bg-circle-green w-full p-3">
           <img 

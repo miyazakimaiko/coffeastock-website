@@ -167,23 +167,6 @@
 #record-coffee {
   .bg-circle-green {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      left: -20px;
-      height: 250px;
-      width: 250px;
-      background-color: var(--green);
-      border-radius: 50%;
-      z-index: -1;
-
-      @include sm() {
-        height: 400px;
-        width: 400px;
-      }
-    }
     &::after {
       content: "";
       position: absolute;
@@ -213,23 +196,6 @@
 #tasting-wheel {
   .bg-circle-pink {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      right: -30px;
-      height: 250px;
-      width: 250px;
-      background-color: var(--pink);
-      border-radius: 50%;
-      z-index: -1;
-
-      @include sm() {
-        height: 400px;
-        width: 400px;
-      }
-    }
     &::after {
       content: "";
       position: absolute;
@@ -259,23 +225,6 @@
 #dashboard-metrics {
   .bg-circle-blue {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      left: 5px;
-      height: 250px;
-      width: 250px;
-      background-color: var(--ash-blue);
-      border-radius: 50%;
-      z-index: -1;
-
-      @include sm() {
-        height: 400px;
-        width: 400px;
-      }
-    }
     &::after {
       content: "";
       position: absolute;
@@ -307,23 +256,6 @@
 #compare-recipes {
   .bg-circle-orange {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      right: -40px;
-      height: 250px;
-      width: 250px;
-      background-color: var(--orange);
-      border-radius: 50%;
-      z-index: -1;
-
-      @include sm() {
-        height: 400px;
-        width: 400px;
-      }
-    }
     &::after {
       content: "";
       position: absolute;
