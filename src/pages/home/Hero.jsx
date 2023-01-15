@@ -9,13 +9,13 @@ const Hero = () => {
     const words = document.querySelectorAll("#heroTitle .words");
     separateLetters(words)
     gsap.set("#heroTitle .letter", {display: "inline-block"});
-    gsap.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, delay: 0.5, stagger: 0.02});
-    gsap.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<");
-    gsap.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<");
-    gsap.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
+    gsap.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1, delay: 0.8});
+    gsap.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1, delay: 0.8});
+    gsap.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1, delay: 0.8});
+    gsap.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, delay: 1, stagger: 0.02});
+
   }, []);
   
-
   return (
     <article id="hero" 
       className="w-full max-w-screen-xl mx-auto h-auto md:h-[80vh] 
