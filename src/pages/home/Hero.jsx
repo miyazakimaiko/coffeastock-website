@@ -6,25 +6,14 @@ import separateLetters from '../../helpers/SeparateLettersForAnimation';
 
 const Hero = () => {  
   useLayoutEffect(() => {
-    const heroTimeline = gsap.timeline({
-      defaults: {
-        ease: "Power3.easeInOut",
-      },
-      paused: true,
-      delay: 0.3,
-    });
-  
     const words = document.querySelectorAll("#heroTitle .words");
     separateLetters(words);
     gsap.set("#heroTitle .letter", {display: "inline-block"});
 
-    const prepHeroTimeline = new Promise((resolve, reject) => {
-      heroTimeline.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, stagger: 0.02})
-      heroTimeline.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.6")
-      heroTimeline.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<")
-      heroTimeline.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
-    });
-    prepHeroTimeline.then(heroTimeline.play());
+    gsap.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, delay: 0.5, stagger: 0.02})
+    gsap.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.6")
+    gsap.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<")
+    gsap.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
   }, []);
   
 
