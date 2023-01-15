@@ -1,11 +1,10 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
 import DashboardImg from '../../assets/images/coffeastock-dashboard.webp';
 import separateLetters from '../../helpers/SeparateLettersForAnimation';
 
 
-const Hero = () => {
-
+const Hero = () => {  
   useLayoutEffect(() => {
     const heroTimeline = gsap.timeline({
       defaults: {
@@ -14,21 +13,20 @@ const Hero = () => {
       paused: true,
       delay: 0.3,
     });
-
+  
     const words = document.querySelectorAll("#heroTitle .words");
     separateLetters(words);
     gsap.set("#heroTitle .letter", {display: "inline-block"});
-    heroTimeline.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, stagger: 0.02})
-    heroTimeline.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.5")
-    heroTimeline.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<")
-    heroTimeline.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
 
-    document.addEventListener("readystatechange", (event) => {
-      if (document.readyState === "complete") {
-        heroTimeline.play();
-      }
+    const prepHeroTimeline = new Promise((resolve, reject) => {
+      heroTimeline.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, stagger: 0.02})
+      heroTimeline.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.6")
+      heroTimeline.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<")
+      heroTimeline.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
     });
-  }, [])
+    prepHeroTimeline.then(heroTimeline.play());
+  }, []);
+  
 
   return (
     <article id="hero" 
