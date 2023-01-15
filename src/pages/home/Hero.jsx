@@ -7,12 +7,11 @@ import separateLetters from '../../helpers/SeparateLettersForAnimation';
 const Hero = () => {  
   useLayoutEffect(() => {
     const words = document.querySelectorAll("#heroTitle .words");
-    separateLetters(words);
+    separateLetters(words)
     gsap.set("#heroTitle .letter", {display: "inline-block"});
-
-    gsap.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, delay: 0.5, stagger: 0.02})
-    gsap.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<0.6")
-    gsap.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<")
+    gsap.fromTo("#heroTitle .letter", {y: '100%'}, {y: -4, delay: 0.5, stagger: 0.02});
+    gsap.fromTo("#heroImgLg", {x:30, opacity: 0}, {x:0, opacity: 1}, "<");
+    gsap.fromTo("#heroImgSm", {x:30, opacity: 0}, {x:0, opacity: 1}, "<");
     gsap.fromTo("#heroText", {y:20, opacity: 0}, {y:0, opacity: 1}, "<");
   }, []);
   
